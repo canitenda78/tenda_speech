@@ -13,4 +13,9 @@ class SiteController extends Controller
         $posts = Post::all(); // 全ての投稿を取得
         return view('site/top', ['posts' => $posts]); // 'products'ビューに$postsを渡す
     }
+
+    public function create(Request $request)
+    {
+        return view('site.top');
+    }
 }

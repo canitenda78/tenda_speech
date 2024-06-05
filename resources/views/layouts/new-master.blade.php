@@ -31,6 +31,7 @@
                                 <li><hr class="dropdown-divider" /></li>
                                 <li><a class="dropdown-item" href="#!">Popular Items</a></li>
                                 <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                                <li><a class="dropdown-item" href="{{ route('post.create', $post) }}">商品追加画面</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -56,6 +57,7 @@
         </header>
         <!-- Section-->
         <main>
+            <!--main部分を変更する-->
             @yield('product')
         </main>
         <!-- Footer-->

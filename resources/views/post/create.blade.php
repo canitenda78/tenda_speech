@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>読書記録</title>
+    <title>商品登録</title>
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 
 
@@ -17,19 +17,19 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">読書記録</div>
+                    <div class="card-header">商品登録</div>
 
                     <div class="card-body">
                         <form method="post" action="{{ route('post.store') }}" enctype="multipart/form-data">
                             @csrf
 
                             <div class="form-group">
-                                <label for="title">本のタイトル</label>
+                                <label for="title">商品名/label>
                                 <input type="text" class="form-control" id="title" name="title" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="image_book">本の写真</label>
+                                <label for="image_book">商品イメージ</label>
                                 <input type="file" class="form-control-file" id="image_book" name="image_book">
                             </div>
 
@@ -51,6 +51,7 @@
                             </div>
                         @endif
                     </div>
+                    <a href="{{ route('site.top') }}">サイトトップへ</a>
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@ Route::get('/', function () {
 });
 
 //post/createにアクセスした際にPostControllerのcreate()を実行する
-Route::get('post/create', [PostController::class, 'create']);
+Route::get('post/create', [PostController::class, 'create'])->name('post.create');
 
 //postディレクトリでpost送信された際にPostControllerのstore()を実行する
 Route::post('post', [PostController::class, 'store'])->name('post.store');
@@ -26,4 +26,5 @@ Route::delete('post/{post}', [PostController::class, 'destroy'])->name('post.des
 //
 Route::get('/new-master', [TemplateController::class, 'index']);
 
-Route::get('/site/top', [SiteController::class, 'index']);
+// //site/topを表示するメソッドへのルート
+Route::get('/site/top', [SiteController::class, 'index'])->name('site.top');
