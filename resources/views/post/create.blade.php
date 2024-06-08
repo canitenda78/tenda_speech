@@ -24,7 +24,7 @@
                             @csrf
 
                             <div class="form-group">
-                                <label for="title">商品名/label>
+                                <label for="title">商品名</label>
                                 <input type="text" class="form-control" id="title" name="title" required>
                             </div>
 
